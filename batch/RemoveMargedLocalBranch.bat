@@ -1,4 +1,6 @@
-set mergedBranches=`git branch --merged master`
+git checkout master
+set mergedBranches=`git branch --merged`
+setlocal EnableDelayedExpansion
 for /F "usebackq delims=" %%g in (%mergedBranches%) do (
     echo "%%g" | findstr "master develop"
     if !errorlevel! equ 1 (
