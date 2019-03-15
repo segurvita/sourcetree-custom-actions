@@ -1,0 +1,2 @@
+#!/bin/bash
+git branch --merged | grep -vE '^\*|master$|develop$' | xargs -I % git branch -d %
