@@ -1,4 +1,3 @@
-rem git checkout master
 set mergedBranches=`git branch --merged`
 setlocal EnableDelayedExpansion
 for /F "usebackq delims=" %%g in (%mergedBranches%) do (
